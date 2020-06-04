@@ -6,7 +6,7 @@ export const DELETE_USER_START = 'DELETE_USER_START'
 export const DELETE_USER_SUCCESS = 'DELETE_USER_SUCCESS'
 export const DELETE_ERROR = 'DELETE_ERROR'
 
-const BASE_URL = 'https://essential2us.herokuapp.com'
+const BASE_URL = 'localhost:8080'
 
 export const deleteUser = (ID, token) => dispatch => {
 	console.log('userID variable in actions: ', ID)

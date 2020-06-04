@@ -43,6 +43,7 @@ server.post('/users', (req, res) => {
 	}
 	const newUser = db.createUser({
 		name: req.body.name,
+		password: req.body.password,
 	})
 	res.status(201).json(newUser)
 })
@@ -52,6 +53,7 @@ server.put('/users/:id', (req, res) => {
 	if (user) {
 		const updatedUser = db.updateUser(user.id, {
 			name: req.body.name || user.name,
+			bio: req.body.bio || user.bio,
 		})
 		res.json(updatedUser)
 	} else {

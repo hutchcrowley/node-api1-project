@@ -8,7 +8,7 @@ export const FETCH_VALUES_START = 'FETCH_VALUES_START'
 export const FETCH_VALUES_SUCCESS = 'FETCH_VALUES_SUCCESS'
 export const FETCH_FAILURE = 'FETCH_FAILURE'
 
-const BASE_URL = 'https://essential2us.herokuapp.com'
+const BASE_URL = 'localhost:8080'
 
 // action creator function for fetching a list of values to be displayed when a user selects a drop-down
 

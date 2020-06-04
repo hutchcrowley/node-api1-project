@@ -12,7 +12,7 @@ export const USER_LOGOUT = 'USER_LOGOUT'
 
 export const USER_FAILURE = 'USER_FAILURE'
 
-const BASE_URL = 'https://essential2us.herokuapp.com'
+const BASE_URL = 'localhost:8080'
 
 // action creator function for registering a user. takes in the newUser object sent from the Register component, saves the user id returned from the response, and returns a dispatch call to modify the global state via the reducer function
 
