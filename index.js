@@ -1,5 +1,5 @@
 const express = require('express')
-const db = require('./database.js')
+const db = require('./users.js')
 
 const port = 8080
 
@@ -36,13 +36,13 @@ server.get('/users/:id', (req, res) => {
 })
 
 server.post('/users', (req, res) => {
-	if (!req.body.name) {
+	if (!req.body.username) {
 		res.status(400).json({
 			message: 'User not created',
 		})
 	}
 	const newUser = db.createUser({
-		name: req.body.name,
+		username: req.body.name,
 		password: req.body.password,
 	})
 	res.status(201).json(newUser)

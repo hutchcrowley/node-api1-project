@@ -27,6 +27,5 @@ export const deleteUser = (ID, token) => dispatch => {
 				type: DELETE_ERROR,
 				payload: `Error: ${err} returned from server`,
 			})
-			// console.log('DELETION ERROR: ', err)
 		})
 }
