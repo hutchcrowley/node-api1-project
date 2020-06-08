@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  max-width: 95vw;
+  max-height: 90vh;
+  margin: 0 auto;
+  display: flex;
+}
+html .App,
+body .App,
+#root .App {
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 6rem;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #e3e3e3;
+  text-align: center;
+  padding: 0.2rem 0;
+}
+html .App a,
+body .App a,
+#root .App a {
+  color: #000;
+  background-color: #e3e3e3;
+  transition: background-color 500ms ease-in-out;
+  transition: border 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 40%;
+  text-decoration: none;
+  font-size: 16pt;
+  margin: 0 0.5rem;
+  border-radius: 0;
+  border: none;
+}
+html .App a:hover,
+body .App a:hover,
+#root .App a:hover {
+  background-color: #fff;
+  color: #7d5a5a;
+  border: 6px solid #000;
+  border-radius: 5px;
+}
+html .App h1,
+body .App h1,
+#root .App h1 {
+  font-size: 58pt;
+  background-color: rgba(0, 0, 0, 0.139);
+  font-weight: 100;
+  width: 80rem;
+  margin-bottom: 2rem;
+}
+html .App .values-list,
+body .App .values-list,
+#root .App .values-list {
+  border: 2px solid red;
+  display: flex;
+}
+html .App .main-ui-wrapper,
+body .App .main-ui-wrapper,
+#root .App .main-ui-wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+}
+html .App .main-ui-wrapper .main-ui,
+body .App .main-ui-wrapper .main-ui,
+#root .App .main-ui-wrapper .main-ui {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  box-shadow: black 2px 2px 6px;
+  max-height: 85vh;
+  width: inherit;
+  min-height: 20rem;
+  margin: 1rem auto 6rem auto;
+}
+html .App .main-ui-wrapper .main-ui h2,
+body .App .main-ui-wrapper .main-ui h2,
+#root .App .main-ui-wrapper .main-ui h2 {
+  font-size: 30pt;
+  font-weight: lighter;
+  width: 40rem;
+  margin-bottom: 2.5rem;
+}
+html .App .main-ui-wrapper .main-ui h3,
+body .App .main-ui-wrapper .main-ui h3,
+#root .App .main-ui-wrapper .main-ui h3 {
+  font-size: 18pt;
+  font-weight: 50;
+  cursor: pointer;
+  width: 30%;
+  margin: 2.5rem auto 0 2rem;
+}
+html .App .main-ui-wrapper .main-ui h4,
+body .App .main-ui-wrapper .main-ui h4,
+#root .App .main-ui-wrapper .main-ui h4 {
+  background-color: #e3e3e3;
+  transition: background-color 330ms ease-in-out;
+  transition: border 300ms ease-in-out;
+  text-align: center;
+  font-size: 20pt;
+  font-weight: lighter;
+  width: 95%;
+  padding: 6rem 0;
+  margin: 1rem auto;
+  border: none;
+  display: block;
+  height: 2rem;
+}
+html .App .main-ui-wrapper .main-ui h4:hover,
+body .App .main-ui-wrapper .main-ui h4:hover,
+#root .App .main-ui-wrapper .main-ui h4:hover {
+  border: 15px solid #7d5a5a;
+  border-radius: 10px;
+  background-color: #fff;
+  transform: rotate3d();
+}
+html .App .main-ui-wrapper .main-ui .main-links,
+body .App .main-ui-wrapper .main-ui .main-links,
+#root .App .main-ui-wrapper .main-ui .main-links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 6rem;
+  padding: 0 3rem 1rem;
+  margin-bottom: 6rem;
+  background-color: #7d5a5a;
+  opacity: 0.9;
+  box-shadow: black 2px 2px 6px;
+  box-sizing: content-box;
+  border-radius: 0;
+}
+html .App .main-ui-wrapper .main-ui .spinner-center,
+body .App .main-ui-wrapper .main-ui .spinner-center,
+#root .App .main-ui-wrapper .main-ui .spinner-center {
+  background-color: black;
+}
+html .App .main-ui-wrapper .main-ui .spinner-center .spinner,
+body .App .main-ui-wrapper .main-ui .spinner-center .spinner,
+#root .App .main-ui-wrapper .main-ui .spinner-center .spinner {
+  height: inherit;
+}
+html .App .main-ui-wrapper .main-ui .no-route-page,
+body .App .main-ui-wrapper .main-ui .no-route-page,
+#root .App .main-ui-wrapper .main-ui .no-route-page {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+html .App .main-ui-wrapper .main-ui .no-route-page a,
+body .App .main-ui-wrapper .main-ui .no-route-page a,
+#root .App .main-ui-wrapper .main-ui .no-route-page a {
+  background-color: initial;
+  border: none;
+  color: #7d5a5a;
+}
+html .App .main-ui-wrapper .main-ui .no-route-page a:hover,
+body .App .main-ui-wrapper .main-ui .no-route-page a:hover,
+#root .App .main-ui-wrapper .main-ui .no-route-page a:hover {
+  background-color: initial;
+}
+html .App .main-ui-wrapper .user-profile-container,
+body .App .main-ui-wrapper .user-profile-container,
+#root .App .main-ui-wrapper .user-profile-container {
+  box-shadow: black 2px 2px 6px;
+  width: 73vw;
+  height: 42vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: inherit;
+}
+html .App .main-ui-wrapper .user-profile-container .user-links,
+body .App .main-ui-wrapper .user-profile-container .user-links,
+#root .App .main-ui-wrapper .user-profile-container .user-links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 6rem;
+  padding: 0 3rem 1rem;
+  margin-bottom: 6rem;
+  background-color: #7d5a5a;
+  opacity: 0.9;
+  box-shadow: black 2px 2px 6px;
+  box-sizing: content-box;
+  border-radius: 0;
+}
+html .App .main-ui-wrapper .user-profile-container .user-links a,
+body .App .main-ui-wrapper .user-profile-container .user-links a,
+#root .App .main-ui-wrapper .user-profile-container .user-links a {
+  color: #000;
+  background-color: #e3e3e3;
+  transition: background-color 500ms ease-in-out;
+  transition: border 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 40%;
+  text-decoration: none;
+  font-size: 16pt;
+  margin: 0 0.5rem;
+  border-radius: 0;
+  border: none;
+}
+html .App .main-ui-wrapper .user-profile-container .user-links a:hover,
+body .App .main-ui-wrapper .user-profile-container .user-links a:hover,
+#root .App .main-ui-wrapper .user-profile-container .user-links a:hover {
+  background-color: #fff;
+  color: #7d5a5a;
+  border: 6px solid #000;
+  border-radius: 5px;
+}
+html .App .main-ui-wrapper .auth-form-wrapper,
+body .App .main-ui-wrapper .auth-form-wrapper,
+#root .App .main-ui-wrapper .auth-form-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(57, 57, 57, 0.612);
+  border: 2px solid black;
+  box-shadow: #613737 5px 5px 7px;
+  padding: 2rem 0;
+  width: 27rem;
+  height: auto;
+  margin-bottom: 4em;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form a,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form a,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form a {
+  text-decoration: none;
+  font-size: 17pt;
+  width: 95%;
+  color: black;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form label,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form label,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form label {
+  color: #fff;
+  font-weight: 100;
+  font-size: larger;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form input,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form input,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: black 1px 1px 1.5px;
+  font-size: 14pt;
+  text-align: center;
+  padding: 0.2rem;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form .auth-button,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form .auth-button,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form .auth-button {
+  box-shadow: black 1px 1px 1.5px;
+  font-family: "Changa", sans-serif;
+  font-weight: 250;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 13rem;
+  font-size: 15pt;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form #cancel button,
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form #cancel a,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form #cancel button,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form #cancel a,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form #cancel button,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form #cancel a {
+  font-size: 15pt;
+  padding: 0;
+  margin: 0;
+  background-color: initial;
+}
+html .App .main-ui-wrapper .auth-form-wrapper .auth-form h3,
+body .App .main-ui-wrapper .auth-form-wrapper .auth-form h3,
+#root .App .main-ui-wrapper .auth-form-wrapper .auth-form h3 {
+  text-align: left;
+  font-family: "Changa", sans-serif;
+  font-size: 35pt;
+  font-weight: 500;
+  box-shadow: black 4px 4px 2px;
+  width: 100%;
+  color: #879884;
+  background-color: #595656;
+  padding-left: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */
