@@ -42,7 +42,7 @@ server.post('/users', (req, res) => {
 		})
 	}
 	const newUser = db.createUser({
-		username: req.body.name,
+		username: req.body.username,
 		password: req.body.password,
 	})
 	res.status(201).json(newUser)
@@ -51,13 +51,19 @@ server.post('/users', (req, res) => {
 server.put('/users/:id', (req, res) => {
 	const user = db.getUserById(req.params.id)
 	if (user) {
-		const updatedUser = db.updateUser(user.id, {
-			name: req.body.name || user.name,
-			bio: req.body.bio || user.bio,
-		})
-		res.json(updatedUser)
+		if (!req.body.username || !req.body.bio) {
+			res.status(400).json({
+				message: 'Cannot update: please fill out all fields',
+			})
+		} else {
+			const updatedUser = db.updateUser(user.id, {
+				username: req.body.username || user.username,
+				bio: req.body.bio || user.bio,
+			})
+			res.json(updatedUser)
+		}
 	} else {
-		res.status(400).json({
+		res.status(404).json({
 			message: 'User not found - cannot update',
 		})
 	}
